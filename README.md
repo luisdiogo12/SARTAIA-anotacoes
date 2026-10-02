@@ -1,4 +1,4 @@
-# Anotações relativas à Dissertação: Síntese Automática de Redes de Transformação usando Algoritmos de Inteligência Artificial
+# Anotações relativas à Dissertação: Síntese Automática de Redes de Transformação usando Algoritmos de Inteligência Artificial (SARTAIA)
 
 ## 1. Introdução
 
@@ -13,7 +13,7 @@ Requisitos:
 - git
 
 ```bash
-cd anotamentos
+cd SARTAIA-anotacoes
 uv sync
 ```
 
