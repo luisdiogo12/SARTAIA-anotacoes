@@ -1,0 +1,13 @@
+[project]
+name = "SARTAIA-anotacoes"
+version = "0.1.0"
+description = "Anotações relativas à dissertação: Síntese Automática de Redes de Transformação usando Algoritmos de Inteligência Artificial (SARTAIA)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-awesome-pages-plugin>=2.10.1",
+    "mkdocs-drawio>=1.16.3",
+    "mkdocs-git-revision-date-localized-plugin>=1.6.0",
+    "mkdocs-material>=9.7.7",
+]

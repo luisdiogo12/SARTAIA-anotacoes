@@ -1,0 +1,104 @@
+## MKDOCS CONFIGURATION - Configuration Inheritance : some organizations may maintain multiple sites which all share a common configuration across them. Rather than maintaining separate configurations for each, the common configuration options can be defined in a parent configuration file which each site's primary configuration file inherits.
+# INHERIT: ../base.yml
+
+## MKDOCS CONFIGURATION - Project Information
+site_name: Rascunho Dissertação
+# site_url:
+# repo_url:
+# repo_name:
+# edit_uri:
+# site_description:
+# site_author:
+# copyright:
+# remote_branch:
+# remote_name:
+
+## MKDOCS CONFIGURATION - DOCUMENTATION LAYOUT
+# nav:
+#   - Home: index.md
+#   - User Guide:
+#     - Writing your docs: writing-your-docs.md
+#     - Styl## ing your docs: styling-your-docs.md
+#   - About:
+#     - License: license.md
+#     - Release Notes: release-notes.md
+# draft_docs:
+# not_in_nav:
+# validation:
+#   omitted_files: warn
+#   absolute_links: warn  # Or 'relative_to_docs' - new in MkDocs 1.6
+#   unrecognized_links: warn
+#   anchors: warn  # New in MkDocs 1.6
+#
+#
+#
+#
+
+## MKDOCS CONFIGURATION - 
+
+docs_dir: docs
+## esta regra especifica que pus é para excluir todos os ficheiros que começem por _, para serem usados como snippet
+exclude_docs: | 
+  _*.md 
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: red
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      default: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets: # serve para 
+      base_path: 
+            - docs
+            # - !relative # Relative to the directory of the current Markdown file
+            # - !relative $docs_dir  # Path of the docs_dir
+            # - !relative $config_dir  # Path of the directory that contains the main mkdocs.yml
+            # - !relative $config_dir/some/child/dir  # Some subdirectory of the root config directory
+      check_paths: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search:
+      lang: pt
+      indexing: 'full'
+  - awesome-pages
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - drawio
