@@ -1,6 +1,18 @@
 # Relatório de Progresso
 
 
+## 2026/10/05
+
+Escrevi o conteúdo para a apresentação do sprint 1 de PDE
+
+## 2026/10/03
+
+Li a introdução na documentação da biblioteca gymnasium da openia
+
+## 2026/10/02
+
+Estudei a unidade 1 do curso deepRL da Hugging Face 
+
 ## 2026/10/01 - Apontamentos da reunião com os orientadores
 
 #TODO fazer os cursos:
