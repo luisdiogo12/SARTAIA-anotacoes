@@ -1,5 +1,17 @@
 # Relatório de Progresso
 
+
+## Semana 2026/10/26
+
+**Feito:**
+- organizar o workspace e configuracao do Zotero
+
+Reunião com os orientadores:
+- Fazer curso Hugging Face Agents
+- Começar a experimentar LLMs diferentes a resolver este problema
+  - experimentar tb com modelos open-source
+  - fazer benchmark
+
 ## Semana 2026/10/18
 
 Reunião com os orientadores:
