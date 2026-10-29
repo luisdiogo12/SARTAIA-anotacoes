@@ -41,6 +41,11 @@ docs_dir: docs
 exclude_docs: | 
   _*.md 
 
+hooks:
+  - hooks/citekeys.py
+watch:
+  - refs.bib
+
 theme:
   name: material
   palette:
