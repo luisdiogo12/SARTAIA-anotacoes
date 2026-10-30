@@ -5,6 +5,7 @@
 
 **Feito:**
 - organizar o workspace e configuracao do Zotero
+- pesquisa e leitura de artigos
 
 Reunião com os orientadores:
 - Fazer curso Hugging Face Agents

@@ -9,8 +9,114 @@
   urldate = {2026-10-28},
   abstract = {This paper presented a fully automated inverse design method for power amplifiers (PAs) based on specific pixelated design spaces. Traditional PA design relied on manual Load-Pull analysis and late-stage manufacturability tuning, while defining impedance constraints remained a challenge for automation. A layout-level Electromagnetic (EM) model was incorporated early in the design process, with a fixed-size pixelated space allocated for the matching network. Various ideal microstrip topologies served as placeholders for pixel to explore impedance information with the goals of achieving the desired amplifier performance. The DBSCAN algorithm clustered impedance values of topologies at each frequency on the Smith chart, and elliptical envelopes were used to automatically define impedance constraints for pixel matching. This method automated the design process, shortened the design cycle, and delivered ultra-compact, high-efficiency PAs suitable for space-constrained applications. Results demonstrated a PA achieving 72\% PAE and 40 dBm output at 3.35 GHz, with matching network size of 0.2 λg × 0.2 λg.},
   eventtitle = {2025 {{IEEE MTT-S International Wireless Symposium}} ({{IWS}})},
-  keywords = {AI driven design,Clustering algorithms,Image quality,Impedance,impedance matching,inverse design,Inverse design,Manuals,Microstrip,Network topology,pixelated design space,Power amplifiers,Topology,Wireless communication},
+  keywords = {Clustering algorithms,Image quality,Impedance,impedance matching,inverse design,Inverse design,Manuals,Microstrip,Network topology,pixelated design space,Power amplifiers,Topology,unread,Wireless communication},
   file = {/home/luisd/Zotero/storage/K5DVST3A/biAIDrivenPixelatedMatching2025.pdf}
+}
+
+@article{bujanaSelfCalibratingFrameworkAnalog,
+  title = {A {{Self-Calibrating Framework}} for {{Analog Circuit Sizing Using LLM-Derived Analytical Equations}}},
+  author = {Bujana, Antonio J},
+  abstract = {We present a design automation framework for analog circuit sizing that produces calibrated, topology-specific analytical equations from raw circuit netlists. A large language model (LLM) derives a complete Python sizing function in which each device dimension is traceable to a specific design rationale —a form of interpretable output absent from existing optimizationbased and LLM-based sizing methods. A deterministic calibration loop extracts process-dependent parameters from a single DC operating point simulation, while a prediction-error feedback mechanism compensates for analytical inaccuracies. We validate the framework on circuits ranging from 6 to 30 transistors —spanning single-stage, current-mirror (simple and cascoded), folded-cascode, gain-boosted folded-cascode, two-stage Millercompensated, nested-Miller-compensated, and complementary class-AB output topologies — across six process nodes from 32 nm to 180 nm. On matched-specification benchmarks, including the class-AB opamp case, the framework converges within a few simulations. Despite large initial prediction errors, convergence depends on the measurement-feedback architecture, not prediction accuracy. The one-shot calibration automatically captures process-dependent variations, enabling cross-node portability without modification, retraining, or per-process characterization.},
+  langid = {english},
+  file = {/home/luisd/Zotero/storage/KC3K677A/bujanaSelfCalibratingFrameworkAnalog.pdf}
+}
+
+@article{kimAntennaImpedanceMatching2021,
+  title = {Antenna {{Impedance Matching Using Deep Learning}}},
+  author = {Kim, Jae Hee and Bang, Jinkyu},
+  date = {2021-10-12},
+  journaltitle = {Sensors (Basel, Switzerland)},
+  shortjournal = {Sensors (Basel)},
+  volume = {21},
+  number = {20},
+  eprint = {34695978},
+  eprinttype = {pubmed},
+  pages = {6766},
+  issn = {1424-8220},
+  doi = {10.3390/s21206766},
+  url = {https://pmc.ncbi.nlm.nih.gov/articles/PMC8541658/},
+  urldate = {2026-10-30},
+  abstract = {We propose a deep neural network (DNN) to determine the matching circuit parameters for antenna impedance matching. The DNN determines the element values of the matching circuit without requiring a mathematical description of matching methods, and it approximates feasible solutions even for unimplementable inputs. For matching, the magnitude and phase of impedance should be known in general. In contrast, the element values of the matching circuit can be determined only using the impedance magnitude using the proposed DNN. A gamma-matching circuit consisting of a series capacitor and a parallel capacitor was applied to a conventional inverted-F antenna for impedance matching. For learning, the magnitude of input impedance S11 of the antenna was extracted according to the element values of the matching circuit. A total of 377 training samples and 66 validation samples were obtained. The DNN was then constructed considering the magnitude of impedance S11 as the input and the element values of the matching circuit as the output. During training, the loss converged as the number of epochs increased. In addition, the desired matching values for unlearned square and triangular waves were obtained during testing.},
+  pmcid = {PMC8541658},
+  file = {/home/luisd/Zotero/storage/LPKC6G89/kimAntennaImpedanceMatching2021.pdf}
+}
+
+@article{laiAnalogCoderAnalogCircuit,
+  title = {{{AnalogCoder}}: {{Analog Circuit Design}} via {{Training-Free Code Generation}}},
+  author = {Lai, Yao and Lee, Sungyoung and Chen, Guojin and Poddar, Souradip and Hu, Mengkang and Pan, David Z and Luo, Ping},
+  abstract = {Analog circuit design is a significant task in modern chip technology, focusing on the selection of component types, connectivity, and parameters to ensure proper circuit functionality. Despite advances made by Large Language Models (LLMs) in digital circuit design, the complexity and scarcity of data in analog circuitry pose significant challenges. To mitigate these issues, we introduce AnalogCoder, the first training-free LLM agent for designing analog circuits through Python code generation. Firstly, AnalogCoder incorporates a feedback-enhanced flow with tailored domainspecific prompts, enabling the automated and self-correcting design of analog circuits with a high success rate. Secondly, it proposes a circuit tool library to archive successful designs as reusable modular sub-circuits, simplifying composite circuit creation. Thirdly, extensive experiments on a benchmark designed to cover a wide range of analog circuit tasks show that AnalogCoder outperforms other LLM-based methods. It has successfully designed 20 circuits, 5 more than standard GPT-4o. We believe AnalogCoder can significantly improve the labor-intensive chip design process, enabling non-experts to design analog circuits efficiently.},
+  langid = {english},
+  file = {/home/luisd/Zotero/storage/PPWGW36U/laiAnalogCoderAnalogCircuit.pdf}
+}
+
+@article{luAIAssistedICDesign2026,
+  title = {{{AI-Assisted IC Design With Accelerated Computing}} and {{LLM-Driven Optimization}}: {{Toward Faster}}, {{Smarter Electronic Design Automation}}},
+  shorttitle = {{{AI-Assisted IC Design With Accelerated Computing}} and {{LLM-Driven Optimization}}},
+  author = {Lu, Yi-Chen and Hsiao, Hao-Hsiang and Liang, Rongjian and Ren, Haoxing},
+  date = {2026},
+  journaltitle = {IEEE Solid-State Circuits Magazine},
+  volume = {18},
+  number = {2},
+  pages = {69--82},
+  issn = {1943-0590},
+  doi = {10.1109/MSSC.2026.3685557},
+  url = {https://ieeexplore.ieee.org/document/11574823/},
+  urldate = {2026-10-30},
+  abstract = {Modern physical design (PD) flows face unprecedented scalability challenges as integrated circuits (ICs) reach scales of billions of transistors at advanced nodes. The combinatorial explosion of the design space, coupled with the intricate tradeoffs among power, performance, and area (PPA), increasingly strains traditional heuristic-based optimization. This has motivated a shift toward artificial intelligence (AI)-assisted design methodologies, which leverage data-driven techniques to efficiently navigate high-dimensional design spaces. At the same time, AI-driven PD critically relies on fast and accurate physical feedback since learning-based methods typically require thousands of iterative evaluations during training or inference. This need has driven substantial advances in GPU-accelerated PD, which allow scalable physical evaluation within tight design loops. In this article, we review major directions in AI-assisted scalable PD, including GPU-accelerated PD, machine learning (ML)-based modeling, reinforcement learning (RL), differentiable optimization, and large language model (LLM)-assisted design automation. Representative work includes INSTA, which facilitates efficient gradient-based timing optimization by introducing a GPU-accelerated differentiable static timing analysis (STA) engine with near-signoff accuracy. Lib2Vec learns transferable standard-cell representations to reduce reliance on handcrafted features and enable cross-library reuse. LEGO-Size reformulates gate sizing as a language modeling task, achieving a 125× speedup and a 37\% reduction in total negative slack (TNS) over commercial tools on unseen 3-nm designs. Extending this paradigm to buffer tree synthesis, BUFFALO demonstrates further timing improvements across varying designs. Together, these approaches demonstrate how AI-assisted automation provides a scalable and generalizable extension to traditional PD flows.},
+  keywords = {Artificial intelligence,Electronic design automation and methodology,Integrated circuit synthesis,Large language models,Physical design,Scalability,Smart devices}
+}
+
+@online{luRFAmpDesignerSelfEvolvingMultiAgent2026,
+  title = {{{RFAmpDesigner}}: {{A Self-Evolving Multi-Agent LLM Framework}} for {{Automated Radio Frequency Amplifier Design}}},
+  shorttitle = {{{RFAmpDesigner}}},
+  author = {Lu, Hang and Li, Guochang and Chen, Qianyu and Gao, Huiyan and Wang, Shaogang and He, Xuanyu and Liu, Yiwei and Chen, Gaopeng and Li, Nayu and Qi, Xiaokang and Song, Chunyi and Xu, Zhiwei},
+  date = {2026-05-11},
+  eprint = {2605.10093},
+  eprinttype = {arXiv},
+  eprintclass = {cs.AR},
+  doi = {10.48550/arXiv.2605.10093},
+  url = {http://arxiv.org/abs/2605.10093},
+  urldate = {2026-10-30},
+  abstract = {Automating radio frequency (RF) amplifier design remains challenging because existing methods suffer from the curse of dimensionality, weak use of domain knowledge, and poor transferability, leading to low data efficiency. Meanwhile, although large language models (LLMs) have shown promise in many scientific domains, applying them directly to RF sizing is nontrivial due to the numerical nature of circuit optimization and the reliance on domain-specific design flows. To address this, this paper proposes RFAmpDesigner, a multi-agent framework that automates RF amplifier sizing. It introduces a resource-allocation middleware that reframes high-dimensional parameter tuning as a low-dimensional resource distribution problem, making it easier to inject sizing knowledge into general-purpose LLMs. The framework also follows standard design practice, enabling LLMs to distinguish between high- and low-cost actions and search in parallel. To realize a self-evolving optimization process, the framework employs retrieval-augmented generation (RAG) to reuse past knowledge and experience from memory base. As a proof of concept, we apply RFAmpDesigner to low noise amplifiers of varying complexity. The experimental results show that it can automatically synthesize designs with fractional bandwidths ranging from 10\% to 80\% and center frequencies from 10 GHz to 50 GHz. To the best of our knowledge, this work develops the first LLM-driven approach for RF amplifier sizing that operates on design concepts instead of treating netlists as text, offering a novel solution to mitigate data scarcity in RF design.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Hardware Architecture},
+  file = {/home/luisd/Zotero/storage/ENJ2GHNF/luRFAmpDesignerSelfEvolvingMultiAgent2026.pdf}
+}
+
+@article{pirroneDataDrivenOptimizationStrategies2024,
+  title = {Data-{{Driven Optimization Strategies}} for {{Tunable RF Systems}}},
+  author = {Pirrone, Michelle and Dall’Anese, Emiliano and Barton, Taylor W.},
+  date = {2024-03},
+  journaltitle = {IEEE Transactions on Microwave Theory and Techniques},
+  volume = {72},
+  number = {3},
+  pages = {1919--1931},
+  issn = {1557-9670},
+  doi = {10.1109/TMTT.2023.3313869},
+  url = {https://ieeexplore.ieee.org/document/10268680/},
+  urldate = {2026-10-29},
+  abstract = {The analysis and application of three different optimization algorithms are presented for tunable RF systems along with a comparison of the different tuning control schemes. These approaches are explored both theoretically and in measurement and are applied to a tunable matching network (TMN) to demonstrate how they address dynamic loading conditions in RF systems. Specifically, we present a data-driven (zeroth-order) projected gradient descent (ZO-PGD) algorithm, a feedforward neural network (FNN), and a novel hybrid approach that combines ZO-PGD and an FNN. The techniques are compared in the measurement of the representative TMN system for a variety of different load impedance trajectories and at different rates of change, and the relative merits of each technique are discussed.},
+  keywords = {Artificial neural networks,Hardware,Heuristic algorithms,Impedance,Impedance matching,neural network (NN),Optimization,optimization methods,Radio frequency,Training,tunable microwave circuits,UHF technology},
+  file = {/home/luisd/Zotero/storage/IBQYFR2K/pirroneDataDrivenOptimizationStrategies2024.pdf}
+}
+
+@online{sLLMUSOLargeLanguage2025,
+  title = {{{LLM-USO}}: {{Large Language Model}}-Based {{Universal Sizing Optimizer}}},
+  shorttitle = {{{LLM-USO}}},
+  author = {S, Karthik Somayaji N. and Li, Peng},
+  date = {2025-02-04},
+  eprint = {2502.02764},
+  eprinttype = {arXiv},
+  eprintclass = {cs.AR},
+  doi = {10.48550/arXiv.2502.02764},
+  url = {http://arxiv.org/abs/2502.02764},
+  urldate = {2026-10-30},
+  abstract = {The design of analog circuits is a cornerstone of integrated circuit (IC) development, requiring the optimization of complex, interconnected sub-structures such as amplifiers, comparators, and buffers. Traditionally, this process relies heavily on expert human knowledge to refine design objectives by carefully tuning sub-components while accounting for their interdependencies. Existing methods, such as Bayesian Optimization (BO), offer a mathematically driven approach for efficiently navigating large design spaces. However, these methods fall short in two critical areas compared to human expertise: (i) they lack the semantic understanding of the sizing solution space and its direct correlation with design objectives before optimization, and (ii) they fail to reuse knowledge gained from optimizing similar substructures across different circuits. To overcome these limitations, we propose the Large Language Model-based Universal Sizing Optimizer (LLM-USO), which introduces a novel method for knowledge representation to encode circuit design knowledge in a structured text format. This representation enables the systematic reuse of optimization insights for circuits with similar sub-structures. LLM-USO employs a hybrid framework that integrates BO with large language models (LLMs) and a learning summary module. This approach serves to: (i) infuse domainspecific knowledge into the BO process and (ii) facilitate knowledge transfer across circuits, mirroring the cognitive strategies of expert designers. Specifically, LLM-USO constructs a knowledge summary mechanism to distill and apply design insights from one circuit to related ones. It also incorporates a knowledge summary critiquing mechanism to ensure the accuracy and quality of the summaries and employs BO-guided suggestion filtering to identify optimal design points efficiently. We evaluate the LLMUSO framework through transfer learning experiments on various analog circuits, demonstrating its ability to improve the quality of circuit design optimization.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Hardware Architecture,Computer Science - Machine Learning},
+  file = {/home/luisd/Zotero/storage/5QSGNNYV/sLLMUSOLargeLanguage2025.pdf}
 }
 
 @online{vaswaniAttentionAllYou2023,
@@ -28,4 +134,37 @@
   pubstate = {prepublished},
   keywords = {unread},
   file = {/home/luisd/Zotero/storage/HPZG5C38/vaswaniAttentionAllYou2023.pdf}
+}
+
+@inproceedings{yinADOLLMAnalogDesign2024,
+  title = {{{ADO-LLM}}: {{Analog Design Bayesian Optimization}} with {{In-Context Learning}} of {{Large Language Models}}},
+  shorttitle = {{{ADO-LLM}}},
+  booktitle = {2024 {{ACM}}/{{IEEE International Conference On Computer Aided Design}} ({{ICCAD}})},
+  author = {Yin, Yuxuan and Wang, Yu and Xu, Boxun and Li, Peng},
+  date = {2024-10},
+  pages = {1--9},
+  issn = {1558-2434},
+  doi = {10.1145/3676536.3676816},
+  url = {https://ieeexplore.ieee.org/document/11126380/},
+  urldate = {2026-10-30},
+  abstract = {Analog circuit design requires substantial human expertise and involvement, which is a significant roadblock to design productivity. Bayesian Optimization (BO), a popular machine-learning-based optimization strategy, has been leveraged to automate analog design given its applicability across various circuit topologies and technologies. Traditional BO methods employ black-box Gaussian Process surrogate models and optimized labeled data queries to find optimization solutions by trading off between exploration and exploitation. However, the search for the optimal design solution in BO can be expensive from both a computational and data usage point of view, particularly for high-dimensional optimization problems. This paper presents ADO-LLM, the first work integrating large language models (LLMs) with Bayesian Optimization for analog design optimization. ADO-LLM leverages the LLM's ability to infuse domain knowledge to rapidly generate viable design points to remedy BO's inefficiency in finding high-value design areas specifically under the limited design space coverage of the BO's probabilistic surrogate model. In the meantime, sampling of design points evaluated in the iterative BO process provides quality demonstrations for the LLM to generate high-quality design points while leveraging infused broad design knowledge. Furthermore, the diversity brought by BO's exploration enriches the contextual understanding of the LLM and allows it to more broadly search in the design space and prevent repetitive and redundant suggestions. We evaluate the proposed framework on two different types of analog circuits and demonstrate notable improvements in design efficiency and effectiveness.},
+  eventtitle = {2024 {{ACM}}/{{IEEE International Conference On Computer Aided Design}} ({{ICCAD}})},
+  keywords = {Analog circuits,Bayes methods,Design optimization,Gaussian processes,Iterative methods,Large language models,Optimization,Probabilistic logic,Productivity,Search problems}
+}
+
+@online{zhangAdaptiveAntennaImpedance2026,
+  title = {An {{Adaptive Antenna Impedance Matching Method}} via {{Deep Reinforcement Learning}}},
+  author = {Zhang, Guoquan and Cheng, Wendong and Wang, Weidong and Chen, Li},
+  date = {2026-04-09},
+  eprint = {2604.07736},
+  eprinttype = {arXiv},
+  eprintclass = {eess.SP},
+  doi = {10.48550/arXiv.2604.07736},
+  url = {http://arxiv.org/abs/2604.07736},
+  urldate = {2026-10-30},
+  abstract = {Adaptive impedance matching between antennas and radio frequency front-end modules is critical for maximizing power transmission efficiency in mobile communication systems. Conventional numerical and analytical methods struggle with a trade-off between accuracy and efficiency, while deep neural network (DNN)-based supervised learning approaches rely heavily on large labeled datasets and lack flexibility for dynamic environments. To address these limitations, this paper proposes a deep reinforcement learning (DRL)-based approach for adaptive impedance matching. First, we model the impedance tuning problem as an optimal control problem, proving the feasibility of solving the optimal control law via reinforcement learning. Then, we design a tailored DRL framework for impedance tuning, which employs a compact state representation that integrates key frequency characteristics and matching quality metrics. Additionally, this framework incorporates a piecewise reward function that accounts for both matching accuracy and tuning speed. Furthermore, a test-phase exploration mechanism is introduced to enhance tuning stability, which effectively reduces local optimal trapping and high-frequency tuning variance. Experimental results demonstrate that the proposed method achieves superior performance in terms of tuning accuracy, efficiency, and stability compared with conventional heuristic and gradient-based methods, making it promising for practical impedance tuning systems.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Electrical Engineering and Systems Science - Signal Processing},
+  file = {/home/luisd/Zotero/storage/KR5J3K55/zhangAdaptiveAntennaImpedance2026.pdf}
 }
