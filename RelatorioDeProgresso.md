@@ -1,6 +1,13 @@
 # Relatório de Progresso
 
 
+## Semana 2026/11/02
+
+**Feito**
+
+Reunião com os orientadores:
+- Pesquisar o uso de LLM em malhas
+
 ## Semana 2026/10/26
 
 **Feito:**

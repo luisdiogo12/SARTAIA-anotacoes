@@ -15,8 +15,10 @@ métricas: taxa de sucesso, qualiadade do resultado, taxa de alucinação, numer
 
 Métodos: 
 - Sintese Tradicionar
-- Otimização Numerica
-- Machine Learning
+- Otimização Numerica - L-BFGS
+- Metaheuristicas 
+- Space mapping, Multi-Fidelity Bayesian Optimization
+- Machine Learning Supervised learning
 - Reinforcement learning
 - LLMs
 
