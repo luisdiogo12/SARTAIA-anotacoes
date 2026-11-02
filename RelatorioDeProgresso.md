@@ -6,6 +6,7 @@
 **Feito:**
 - organizar o workspace e configuracao do Zotero
 - pesquisa e leitura de artigos
+- unidade 1 do curso Hugging Face Agents
 
 Reunião com os orientadores:
 - Fazer curso Hugging Face Agents

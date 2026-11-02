@@ -1,3 +1,20 @@
+@article{arias-purdueArtificialNeuralNetworks2024,
+  title = {Artificial {{Neural Networks}} for {{Power Match Modeling}} and {{Verification With}} a {{Novel D-Band Vector Load}}—{{Pull Bench}}},
+  author = {Arias-Purdue, Andrea and Rowell, Petra V. and Ahmed, Sajjad and Veetil, Suhas I. and Urteaga, Miguel E. and Buckwalter, James F.},
+  date = {2024-06},
+  journaltitle = {IEEE Transactions on Microwave Theory and Techniques},
+  volume = {72},
+  number = {6},
+  pages = {3300--3310},
+  issn = {1557-9670},
+  doi = {10.1109/TMTT.2023.3342128},
+  url = {https://ieeexplore.ieee.org/document/10367793/},
+  urldate = {2026-11-01},
+  abstract = {We present an artificial neural network (ANN) model that predicts high-frequency, large-signal hetero-junction bipolar transistor (HBT) performance as a function of the load reflection coefficient and input power trained on a set of load—pull (LP) data that include delivered source power, output power, power-added efficiency (PAE), gain compression, input voltage, and output current. The ANN models are trained with data measured using a novel D -band vector LP test bench at 130, 135, and 140 GHz. We analyze common-base (CB) and common-emitter (CE) indium phosphide (InP) HBTs and show that the CE HBT provides the highest impedance margin that maximizes PAE across a 10\% bandwidth centered at 140 GHz. We fabricate CE HBT power cells and demonstrate state-of-the-art measured performance (36.2\% PAE at 135 GHz at 4-dB compressed gain and 13.6 dBm). Using the ANN model trained at 130 GHz, transfer learning is accomplished for 135 GHz, 140 GHz, and prematched device datasets. The size of the ANN training sets is varied from 25\% to 1\% of the data collected, showing that our models are capable of predicting performance with an average rms error below 1.5\% across sets. To our knowledge, this is the first demonstration of transfer learning within ANNs for transistor nonlinear modeling.},
+  keywords = {Artificial neural network (ANN),Artificial neural networks,D-band,Data models,device model,hetero-junction bipolar transistor (HBT),Heterojunction bipolar transistors,Impedance,indium phosphide (InP),Load modeling,Solid modeling,Tuners,vector load—(LP)},
+  file = {/home/luisd/Zotero/storage/UVZFVEKQ/arias-purdueArtificialNeuralNetworks2024.pdf}
+}
+
 @inproceedings{biAIDrivenPixelatedMatching2025,
   title = {{{AI-Driven Pixelated Matching Network Design}} with {{Automated Impedance Clustering Constraints}} for {{Power Amplifiers}}},
   booktitle = {2025 {{IEEE MTT-S International Wireless Symposium}} ({{IWS}})},
@@ -21,6 +38,76 @@
   file = {/home/luisd/Zotero/storage/KC3K677A/bujanaSelfCalibratingFrameworkAnalog.pdf}
 }
 
+@online{chenDatasetConstructionTraining2026,
+  title = {Dataset {{Construction}} for {{Training LLM}} to {{Learn Analog Circuit Knowledge}}},
+  author = {Chen, Zihao and Zhuang, Ji and Shen, Jinyi and Ke, Xiaoyue and Yang, Xinyi and Zhou, Mingjie and Du, Zhuoyao and Yan, Xu and Wu, Zhouyang and Xu, Zhenyu and Huang, Jiangli and Shang, Li and Zeng, Xuan and Yang, Fan},
+  date = {2026-06-30},
+  eprint = {2508.10409},
+  eprinttype = {arXiv},
+  eprintclass = {cs.AR},
+  doi = {10.48550/arXiv.2508.10409},
+  url = {http://arxiv.org/abs/2508.10409},
+  urldate = {2026-11-01},
+  abstract = {In this paper, we propose AnalogSeeker, an effort toward an open-source foundation language model for analog circuit design, with the aim of integrating domain knowledge and giving design assistance. To overcome the scarcity of data in this field, we employ a corpus collection strategy based on the domain knowledge framework of analog circuits. High-quality, accessible textbooks across relevant subfields are systematically curated and cleaned into a textual domain corpus. To address the complexity of knowledge of analog circuits, we introduce a granular domain knowledge distillation method. Raw, unlabeled domain corpus is decomposed into typical, granular learning nodes, where a multi-agent framework distills implicit knowledge embedded in unstructured text into question-answer data pairs with detailed reasoning processes, yielding a fine-grained, learnable dataset for fine-tuning. To address the unexplored challenges in training analog circuit foundation models, we explore and share our training methods through both theoretical analysis and experimental validation. We finally establish a fine-tuning-centric training paradigm, customizing and implementing a neighborhood selfconstrained supervised fine-tuning (NSC-SFT) algorithm. This approach enhances training outcomes by constraining the perturbation magnitude between the model’s output distributions before and after training. In practice, we train the Qwen2.5-32B-Instruct model to obtain AnalogSeeker, which achieves 85.04\% accuracy on AMSBench-TQA, the analog circuit knowledge evaluation benchmark, with a 15.67\% point improvement over the original model and is competitive with mainstream commercial models. Furthermore, AnalogSeeker also shows effectiveness in the downstream operational amplifier design task. These results suggest that AnalogSeeker acquires domain knowledge and has potential in giving design assistance. AnalogSeeker is open-sourced at https://huggingface.co/analogllm/analogseekerfor research use.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Hardware Architecture},
+  file = {/home/luisd/Zotero/storage/DW49BPV9/chenDatasetConstructionTraining2026.pdf}
+}
+
+@online{chenDatasetConstructionTraining2026a,
+  title = {Dataset {{Construction}} for {{Training LLM}} to {{Learn Analog Circuit Knowledge}}},
+  author = {Chen, Zihao and Zhuang, Ji and Shen, Jinyi and Ke, Xiaoyue and Yang, Xinyi and Zhou, Mingjie and Du, Zhuoyao and Yan, Xu and Wu, Zhouyang and Xu, Zhenyu and Huang, Jiangli and Shang, Li and Zeng, Xuan and Yang, Fan},
+  date = {2026-06-30},
+  eprint = {2508.10409},
+  eprinttype = {arXiv},
+  eprintclass = {cs.AR},
+  doi = {10.48550/arXiv.2508.10409},
+  url = {http://arxiv.org/abs/2508.10409},
+  urldate = {2026-11-01},
+  abstract = {This paper constructs a textual dataset for training large language models (LLMs) to learn analog circuit knowledge and customizes LLM training techniques. For dataset construction, high-quality textbooks are collected and decomposed into fine-grained learning nodes, which are then used to construct structured question-thinking-solution-answer (QTSA) quadruples using a multi-agent framework to capture both final answers and thought processes. The resulting dataset consists of 7.26M tokens of unlabeled data for continual pre-training (CPT) and 112.65M tokens of labeled data for supervised fine-tuning (SFT). We customize the training techniques including initial model selection, training paradigms, regularization techniques, and practical implementation references. Instruct models are identified as suitable training initialization points, an SFT-centric training paradigm is established (finding that CPT provides marginal benefits compared with SFT due to imbalanced data distribution), and SFT with KL divergence regularization can achieve a 2.71 percentage-point improvement over SFT alone. A practical training implementation method is provided for resource-constrained scenarios. Experiments demonstrate that the dataset and training techniques enhance LLMs' analog circuit knowledge. The trained 32B instruct model achieves 84.59\% accuracy on the AMSBench-TQA benchmark, showing a 15.67 percentage-point improvement over the initial model. The trained model also shows capability in the operational amplifier design task based on the Atelier framework.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Hardware Architecture},
+  file = {/home/luisd/Zotero/storage/EP7YEQFC/chenDatasetConstructionTraining2026a.pdf}
+}
+
+@article{chungReinforcementLearningBasedOptimization2026,
+  title = {Reinforcement {{Learning-Based Optimization}} of {{Ku-Band Low-Noise Amplifier}}},
+  author = {Chung, Jiyong and Shin, Hoyeon and Shin, Seonho and Kim, Yeonggi and Zeinolabedinzadeh, Saeed and Ji, Dongjin and Song, Ickhyun},
+  date = {2026-04-30},
+  journaltitle = {Micromachines},
+  shortjournal = {Micromachines},
+  volume = {17},
+  number = {5},
+  pages = {554},
+  issn = {2072-666X},
+  doi = {10.3390/mi17050554},
+  url = {https://www.mdpi.com/2072-666X/17/5/554},
+  urldate = {2026-11-01},
+  abstract = {In this paper, we present a study on the automated design optimization of a wideband low-noise amplifier (LNA) operating in Ku-band (12 to 18 GHz) using proximal policy optimization (PPO), one of the widely applied reinforcement learning (RL) algorithms for engineering problems. As a target microwave active circuit, we select a two-stage LNA architecture, where transmission lines (TLs) are dominantly used for impedance matching and gain/noise optimization. For simplicity, all widths of TLs were fixed so that the characteristic impedance is 50 Ω, with lengths of TLs being set as design parameters. In addition, dimension variables of capacitors were treated as design parameters and, in total, we optimized 29 parameters. For target specifications, we set both S11 and S22 to be below −10 dB over the 12–18 GHz band and the noise figure (NF) to be below 2 dB. A total of 20,140 simulations were performed for training and the overall process took about 24 h. The results show that both the reward and the loss converged appropriately, achieving the target specifications successfully. For the final results, we performed up to 25 predictions, and the prediction process was terminated early if a solution meeting all target specifications was found within the given number of attempts. The device model used was a commercial 150 nm GaN high-electron-mobility transistor (HEMT) process technology.},
+  langid = {english},
+  file = {/home/luisd/Zotero/storage/HXZL7B7V/chungReinforcementLearningBasedOptimization2026.pdf}
+}
+
+@online{guoEngineeringAGIBenchmarking2025,
+  title = {Toward {{Engineering AGI}}: {{Benchmarking}} the {{Engineering Design Capabilities}} of {{LLMs}}},
+  shorttitle = {Toward {{Engineering AGI}}},
+  author = {Guo, Xingang and Li, Yaxin and Kong, Xiangyi and Jiang, Yilan and Zhao, Xiayu and Gong, Zhihua and Zhang, Yufan and Li, Daixuan and Sang, Tianle and Zhu, Beixiao and Jun, Gregory and Huang, Yingbing and Liu, Yiqi and Xue, Yuqi and Kundu, Rahul Dev and Lim, Qi Jian and Zhao, Yizhou and Granger, Luke Alexander and Younis, Mohamed Badr and Keivan, Darioush and Sabharwal, Nippun and Sinha, Shreyanka and Agarwal, Prakhar and Vandyck, Kojo and Mai, Hanlin and Wang, Zichen and Venkatesh, Aditya and Barik, Ayush and Yang, Jiankun and Yue, Chongying and He, Jingjie and Wang, Libin and Xu, Licheng and Chen, Hao and Wang, Jinwen and Xu, Liujun and Shetty, Rushabh and Guo, Ziheng and Song, Dahui and Jha, Manvi and Liang, Weijie and Yan, Weiman and Zhang, Bryan and Karnoor, Sahil Bhandary and Zhang, Jialiang and Pandya, Rutva and Gong, Xinyi and Ganesh, Mithesh Ballae and Shi, Feize and Xu, Ruiling and Zhang, Yifan and Ouyang, Yanfeng and Qin, Lianhui and Rosenbaum, Elyse and Snyder, Corey and Seiler, Peter and Dullerud, Geir and Zhang, Xiaojia Shelly and Cheng, Zuofu and Hanumolu, Pavan Kumar and Huang, Jian and Kulkarni, Mayank and Namazifar, Mahdi and Zhang, Huan and Hu, Bin},
+  date = {2025-11-06},
+  eprint = {2509.16204},
+  eprinttype = {arXiv},
+  eprintclass = {cs.CE},
+  doi = {10.48550/arXiv.2509.16204},
+  url = {http://arxiv.org/abs/2509.16204},
+  urldate = {2026-11-01},
+  abstract = {Modern engineering, spanning electrical, mechanical, aerospace, civil, and computer disciplines, stands as a cornerstone of human civilization and the foundation of our society. However, engineering design poses a fundamentally different challenge for large language models (LLMs) compared with traditional textbook-style problem solving or factual question answering. Although existing benchmarks have driven progress in areas such as language understanding, code synthesis, and scientific problem solving, real-world engineering design demands the synthesis of domain knowledge, navigation of complex trade-offs, and management of the tedious processes that consume much of practicing engineers’ time. Despite these shared challenges across engineering disciplines, no benchmark currently captures the unique demands of engineering design work. In this work, we introduce ENGDESIGN, anEngineeringDesignbenchmark that evaluates LLMs’ abilities to perform practical design tasks across nine engineering domains. Unlike existing benchmarks that focus on factual recall or question answering,ENGDESIGN uniquely emphasizes LLMs’ ability to synthesize domain knowledge, reason under constraints, and generate functional, objective-oriented engineering designs. Each task inENGDESIGNrepresents a real-world engineering design problem, accompanied by a detailed task description specifying design goals, constraints, and performance requirements.ENGDESIGNpioneers asimulation-based evaluation paradigmthat moves beyond textbook knowledge to assess genuine engineering design capabilities and shifts evaluation from static answer checking to dynamic, simulation-driven functional verification, marking a crucial step toward realizing the vision of engineering Artificial General Intelligence (AGI).},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computational Engineering Finance and Science,Computer Science - Human-Computer Interaction,Computer Science - Robotics},
+  file = {/home/luisd/Zotero/storage/VB36DF3X/guoEngineeringAGIBenchmarking2025.pdf}
+}
+
 @article{kimAntennaImpedanceMatching2021,
   title = {Antenna {{Impedance Matching Using Deep Learning}}},
   author = {Kim, Jae Hee and Bang, Jinkyu},
@@ -41,12 +128,63 @@
   file = {/home/luisd/Zotero/storage/LPKC6G89/kimAntennaImpedanceMatching2021.pdf}
 }
 
+@inproceedings{kouhalvandiPerformancePredictionPower2023,
+  title = {Performance {{Prediction}} of {{Power Amplifiers}} for the {{Extended Bandwidth}} via {{Neural Networks}}},
+  booktitle = {2023 31st {{Signal Processing}} and {{Communications Applications Conference}} ({{SIU}})},
+  author = {Kouhalvandi, Lida and Ozoguz, Serdar and Guerrieri, Simona Donati},
+  date = {2023-07},
+  pages = {1--4},
+  issn = {2165-0608},
+  doi = {10.1109/SIU59756.2023.10224038},
+  url = {https://ieeexplore.ieee.org/document/10224038/},
+  urldate = {2026-11-01},
+  abstract = {Abstract This paper presents the optimization methodology for modeling the power amplifier (PA) with the aid of deep neural network (DNN). In this paper we propose an impressive approach leading to extrapolate frequency responses of the PA, where the long short-term memory (LSTM) DNN is employed. The presented method models the PA accurately in terms of scattering parameters, gain, output power and efficiency. This approach tackles the problem of dependency to the engineer experience and reduces the challenges in achieving large frequency band. All the modeling process is performed with the combination of electronic design automation tool and numerical analyzer where automated environment is created. For validating the proposed method, one PA is designed and modelled for the range frequency of 1 to 2.3 GHz. The DNN is firstly trained for the half of the bandwidth and later, the modeled PA is used for predicting the extended frequency band.},
+  eventtitle = {2023 31st {{Signal Processing}} and {{Communications Applications Conference}} ({{SIU}})},
+  keywords = {Artificial neural networks,Deep neural network (DNN),extended frequency response,Frequency measurement,long short-term memory (LSTM),Numerical models,power amplifier (PA),Power amplifiers,Power generation,predict,Predictive models,Scattering parameters},
+  file = {/home/luisd/Zotero/storage/WMD4J9HN/kouhalvandiPerformancePredictionPower2023.pdf}
+}
+
 @article{laiAnalogCoderAnalogCircuit,
   title = {{{AnalogCoder}}: {{Analog Circuit Design}} via {{Training-Free Code Generation}}},
   author = {Lai, Yao and Lee, Sungyoung and Chen, Guojin and Poddar, Souradip and Hu, Mengkang and Pan, David Z and Luo, Ping},
   abstract = {Analog circuit design is a significant task in modern chip technology, focusing on the selection of component types, connectivity, and parameters to ensure proper circuit functionality. Despite advances made by Large Language Models (LLMs) in digital circuit design, the complexity and scarcity of data in analog circuitry pose significant challenges. To mitigate these issues, we introduce AnalogCoder, the first training-free LLM agent for designing analog circuits through Python code generation. Firstly, AnalogCoder incorporates a feedback-enhanced flow with tailored domainspecific prompts, enabling the automated and self-correcting design of analog circuits with a high success rate. Secondly, it proposes a circuit tool library to archive successful designs as reusable modular sub-circuits, simplifying composite circuit creation. Thirdly, extensive experiments on a benchmark designed to cover a wide range of analog circuit tasks show that AnalogCoder outperforms other LLM-based methods. It has successfully designed 20 circuits, 5 more than standard GPT-4o. We believe AnalogCoder can significantly improve the labor-intensive chip design process, enabling non-experts to design analog circuits efficiently.},
   langid = {english},
   file = {/home/luisd/Zotero/storage/PPWGW36U/laiAnalogCoderAnalogCircuit.pdf}
+}
+
+@online{laskarisLLMDrivenEvolutionaryGeneration2026,
+  title = {{{LLM-Driven Evolutionary Generation}} of {{Multi-Objective Bayesian Optimization Algorithms}}},
+  author = {Laskaris, Georgios and Brasher, Reuben and family=Stein, given=Niki, prefix=van, useprefix=false and Raponi, Elena and Bäck, Thomas and Neukart, Florian},
+  date = {2026-07-06},
+  eprint = {2607.08791},
+  eprinttype = {arXiv},
+  eprintclass = {cs.NE},
+  doi = {10.48550/arXiv.2607.08791},
+  url = {http://arxiv.org/abs/2607.08791},
+  urldate = {2026-10-31},
+  abstract = {Designing effective multi-objective Bayesian optimization (MOBO) algorithms requires balancing many interdependent design choices whose optimal configuration is problem-dependent and typically demands deep expertise. We extend the LLaMEA framework to MOBO, using large language models as mutation and crossover operators within evolutionary strategies to generate complete algorithm implementations, with SMAC hyperparameter optimization integrated into the evolutionary loop. Across nine evolutionary runs we generated approximately 900 algorithms and benchmarked them on twelve synthetic problems (ZDT, DTLZ, WFG) and three real-world engineering problems (RE), using a BoFire qParEGO implementation as a state-of-the-art Bayesian-optimization baseline. On the synthetic suite the strongest generated algorithm attains the highest mean normalized hypervolume (0.971, vs. 0.869 for qParEGO) while requiring roughly 60x less wall-clock time; a Friedman test with post-hoc analysis places the two in a single top-performing group, and per-problem tests find the generated algorithm significantly better than qParEGO on 7 of the 12 problems and never worse, matching state-of-the-art accuracy at an order-of-magnitude lower cost. On the three unseen real-world engineering problems a generated algorithm attains the best mean normalized hypervolume (0.985, vs. 0.971 for qParEGO)--significantly better than qParEGO on two of the three problems--at roughly 3.4x lower wall-clock cost, confirming that the gains transfer beyond the synthetic regime. LLM-driven evolutionary search can thus discover algorithm designs that achieve Pareto-efficient trade-offs difficult to reach through manual design.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Neural and Evolutionary Computing},
+  file = {/home/luisd/Zotero/storage/SMD7SYGN/laskarisLLMDrivenEvolutionaryGeneration2026.pdf}
+}
+
+@online{liuEvolutionHeuristicsEfficient2024,
+  title = {Evolution of {{Heuristics}}: {{Towards Efficient Automatic Algorithm Design Using Large Language Model}}},
+  shorttitle = {Evolution of {{Heuristics}}},
+  author = {Liu, Fei and Tong, Xialiang and Yuan, Mingxuan and Lin, Xi and Luo, Fu and Wang, Zhenkun and Lu, Zhichao and Zhang, Qingfu},
+  date = {2024-06-01},
+  eprint = {2401.02051},
+  eprinttype = {arXiv},
+  eprintclass = {cs.NE},
+  doi = {10.48550/arXiv.2401.02051},
+  url = {http://arxiv.org/abs/2401.02051},
+  urldate = {2026-10-30},
+  abstract = {Heuristics are widely used for dealing with complex search and optimization problems. However, manual design of heuristics can be often very labour extensive and requires rich working experience and knowledge. This paper proposes Evolution of Heuristic (EoH), a novel evolutionary paradigm that leverages both Large Language Models (LLMs) and Evolutionary Computation (EC) methods for Automatic Heuristic Design (AHD). EoH represents the ideas of heuristics in natural language, termed thoughts. They are then translated into executable codes by LLMs. The evolution of both thoughts and codes in an evolutionary search framework makes it very effective and efficient for generating high-performance heuristics. Experiments on three widely studied combinatorial optimization benchmark problems demonstrate that EoH outperforms commonly used handcrafted heuristics and other recent AHD methods including FunSearch. Particularly, the heuristic produced by EoH with a low computational budget (in terms of the number of queries to LLMs) significantly outperforms widely-used human hand-crafted baseline algorithms for the online bin packing problem.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Neural and Evolutionary Computing},
+  file = {/home/luisd/Zotero/storage/X7FBXDQE/liuEvolutionHeuristicsEfficient2024.pdf}
 }
 
 @article{luAIAssistedICDesign2026,
@@ -84,6 +222,24 @@
   file = {/home/luisd/Zotero/storage/ENJ2GHNF/luRFAmpDesignerSelfEvolvingMultiAgent2026.pdf}
 }
 
+@online{novikovAlphaEvolveCodingAgent2025,
+  title = {{{AlphaEvolve}}: {{A}} Coding Agent for Scientific and Algorithmic Discovery},
+  shorttitle = {{{AlphaEvolve}}},
+  author = {Novikov, Alexander and Vũ, Ngân and Eisenberger, Marvin and Dupont, Emilien and Huang, Po-Sen and Wagner, Adam Zsolt and Shirobokov, Sergey and Kozlovskii, Borislav and Ruiz, Francisco J. R. and Mehrabian, Abbas and Kumar, M. Pawan and See, Abigail and Chaudhuri, Swarat and Holland, George and Davies, Alex and Nowozin, Sebastian and Kohli, Pushmeet and Balog, Matej},
+  date = {2025-06-16},
+  eprint = {2506.13131},
+  eprinttype = {arXiv},
+  eprintclass = {cs.AI},
+  doi = {10.48550/arXiv.2506.13131},
+  url = {http://arxiv.org/abs/2506.13131},
+  urldate = {2026-10-30},
+  abstract = {In this white paper, we present AlphaEvolve, an evolutionary coding agent that substantially enhances capabilities of state-of-the-art LLMs on highly challenging tasks such as tackling open scientific problems or optimizing critical pieces of computational infrastructure. AlphaEvolve orchestrates an autonomous pipeline of LLMs, whose task is to improve an algorithm by making direct changes to the code. Using an evolutionary approach, continuously receiving feedback from one or more evaluators, AlphaEvolve iteratively improves the algorithm, potentially leading to new scientific and practical discoveries. We demonstrate the broad applicability of this approach by applying it to a number of important computational problems. When applied to optimizing critical components of large-scale computational stacks at Google, AlphaEvolve developed a more efficient scheduling algorithm for data centers, found a functionally equivalent simplification in the circuit design of hardware accelerators, and accelerated the training of the LLM underpinning AlphaEvolve itself. Furthermore, AlphaEvolve discovered novel, provably correct algorithms that surpass state-of-the-art solutions on a spectrum of problems in mathematics and computer science, significantly expanding the scope of prior automated discovery methods (Romera-Paredes et al., 2023). Notably, AlphaEvolve developed a search algorithm that found a procedure to multiply two \$4 \textbackslash times 4\$ complex-valued matrices using \$48\$ scalar multiplications; offering the first improvement, after 56 years, over Strassen's algorithm in this setting. We believe AlphaEvolve and coding agents like it can have a significant impact in improving solutions of problems across many areas of science and computation.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Neural and Evolutionary Computing},
+  file = {/home/luisd/Zotero/storage/P99GKLAX/novikovAlphaEvolveCodingAgent2025.pdf}
+}
+
 @article{pirroneDataDrivenOptimizationStrategies2024,
   title = {Data-{{Driven Optimization Strategies}} for {{Tunable RF Systems}}},
   author = {Pirrone, Michelle and Dall’Anese, Emiliano and Barton, Taylor W.},
@@ -99,6 +255,43 @@
   abstract = {The analysis and application of three different optimization algorithms are presented for tunable RF systems along with a comparison of the different tuning control schemes. These approaches are explored both theoretically and in measurement and are applied to a tunable matching network (TMN) to demonstrate how they address dynamic loading conditions in RF systems. Specifically, we present a data-driven (zeroth-order) projected gradient descent (ZO-PGD) algorithm, a feedforward neural network (FNN), and a novel hybrid approach that combines ZO-PGD and an FNN. The techniques are compared in the measurement of the representative TMN system for a variety of different load impedance trajectories and at different rates of change, and the relative merits of each technique are discussed.},
   keywords = {Artificial neural networks,Hardware,Heuristic algorithms,Impedance,Impedance matching,neural network (NN),Optimization,optimization methods,Radio frequency,Training,tunable microwave circuits,UHF technology},
   file = {/home/luisd/Zotero/storage/IBQYFR2K/pirroneDataDrivenOptimizationStrategies2024.pdf}
+}
+
+@article{romera-paredesMathematicalDiscoveriesProgram2024,
+  title = {Mathematical Discoveries from Program Search with Large Language Models},
+  author = {Romera-Paredes, Bernardino and Barekatain, Mohammadamin and Novikov, Alexander and Balog, Matej and Kumar, M. Pawan and Dupont, Emilien and Ruiz, Francisco J. R. and Ellenberg, Jordan S. and Wang, Pengming and Fawzi, Omar and Kohli, Pushmeet and Fawzi, Alhussein},
+  date = {2024-01},
+  journaltitle = {Nature},
+  volume = {625},
+  number = {7995},
+  pages = {468--475},
+  publisher = {Nature Publishing Group},
+  issn = {1476-4687},
+  doi = {10.1038/s41586-023-06924-6},
+  url = {https://www.nature.com/articles/s41586-023-06924-6},
+  urldate = {2026-10-30},
+  abstract = {Large language models (LLMs) have demonstrated tremendous capabilities in solving complex tasks, from quantitative reasoning to understanding natural language. However, LLMs sometimes suffer from confabulations (or hallucinations), which can result in them making plausible but incorrect statements1,2. This hinders the use of current large models in scientific discovery. Here we introduce FunSearch (short for searching in the function space), an evolutionary procedure based on pairing a pretrained LLM with a systematic evaluator. We demonstrate the effectiveness of this approach to surpass the best-known results in important problems, pushing the boundary of existing LLM-based approaches3. Applying FunSearch to a central problem in extremal combinatorics—the cap set problem—we discover new constructions of large cap sets going beyond the best-known ones, both in finite dimensional and asymptotic cases. This shows that it is possible to make discoveries for established open problems using LLMs. We showcase the generality of FunSearch by applying it to an algorithmic problem, online bin packing, finding new heuristics that improve on widely used baselines. In contrast to most computer search approaches, FunSearch searches for programs that describe how to solve a problem, rather than what the solution is. Beyond being an effective and scalable strategy, discovered programs tend to be more interpretable than raw solutions, enabling feedback loops between domain experts and FunSearch, and the deployment of such programs in real-world applications.},
+  langid = {english},
+  keywords = {Computer science,Pure mathematics},
+  file = {/home/luisd/Zotero/storage/FNZ7297A/romera-paredesMathematicalDiscoveriesProgram2024.pdf}
+}
+
+@online{shiAMSbenchComprehensiveBenchmark2025,
+  title = {{{AMSbench}}: {{A Comprehensive Benchmark}} for {{Evaluating MLLM Capabilities}} in {{AMS Circuits}}},
+  shorttitle = {{{AMSbench}}},
+  author = {Shi, Yichen and Zhang, Ze and Wang, Hongyang and Tao, Zhuofu and Li, Zhongyi and Chen, Bingyu and Wang, Yaxin and {huang}, Zhen and Liu, Xuhua and Chen, Quan and Yu, Zhiping and Lin, Ting-Jung and He, Lei},
+  date = {2025-10-13},
+  eprint = {2505.24138},
+  eprinttype = {arXiv},
+  eprintclass = {cs.LG},
+  doi = {10.48550/arXiv.2505.24138},
+  url = {http://arxiv.org/abs/2505.24138},
+  urldate = {2026-11-01},
+  abstract = {Analog/Mixed-Signal (AMS) circuits play a critical role in the integrated circuit (IC) industry. However, automating Analog/Mixed-Signal (AMS) circuit design has remained a longstanding challenge due to its difficulty and complexity. Although recent advances in Multi-modal Large Language Models (MLLMs) offer promising potential for supporting AMS circuit analysis and design, current research typically evaluates MLLMs on isolated tasks within the domain, lacking a comprehensive benchmark that systematically assesses model capabilities across diverse AMSrelated challenges. To address this gap, we introduce AMSbench, a benchmark suite designed to evaluate MLLM performance across critical tasks including circuit schematic perception, circuit analysis, and circuit design. AMSbench comprises approximately 8000 test questions spanning multiple difficulty levels and assesses eight prominent models, encompassing both open-source and proprietary solutions such as Qwen 2.5-VL and Gemini 2.5 Pro. Our evaluation highlights significant limitations in current MLLMs, particularly in complex multi-modal reasoning and sophisticated circuit design tasks. These results underscore the necessity of advancing MLLMs’ understanding and effective application of circuit-specific knowledge, thereby narrowing the existing performance gap relative to human expertise and moving toward fully automated AMS circuit design workflows. Our data is released at this URL.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning},
+  file = {/home/luisd/Zotero/storage/29Q52MLS/shiAMSbenchComprehensiveBenchmark2025.pdf}
 }
 
 @online{sLLMUSOLargeLanguage2025,
@@ -136,6 +329,41 @@
   file = {/home/luisd/Zotero/storage/HPZG5C38/vaswaniAttentionAllYou2023.pdf}
 }
 
+@online{weindelLLMGuidedSearchDeletionCorrecting2026,
+  title = {{{LLM-Guided Search}} for {{Deletion-Correcting Codes}}},
+  author = {Weindel, Franziska and Heckel, Reinhard},
+  date = {2026-06-05},
+  eprint = {2504.00613},
+  eprinttype = {arXiv},
+  eprintclass = {cs.AI},
+  doi = {10.48550/arXiv.2504.00613},
+  url = {http://arxiv.org/abs/2504.00613},
+  urldate = {2026-10-31},
+  abstract = {Finding deletion-correcting codes of maximum size has been an open problem for over 70 years, even for a single deletion. We adapt FunSearch, a large language model (LLM)guided evolutionary search, to discover functions that construct deletion-correcting codes at short code lengths. For a single deletion, our search finds a function that we prove constructs the conjectured-optimal Varshamov-Tenengolts code. For multiple deletions and quaternary edit codes, the discovered functions improve on prior explicit, search-based, and neural constructions but remain empirical heuristics without new theoretical insights. We study design choices for LLM-guided evolutionary search and find that, for our problem, compute is better allocated to sampling more functions than to longer reasoning traces per function, and that coevolving natural language descriptions with code hurts search quality. We propose deduplicating logically identical functions during evolution, which we find critical for search diversity. Our results demonstrate the potential of LLM-guided evolutionary search for information theory and code design and represent the first application of such methods for constructing error-correcting codes. However, in our current formulation, evaluating a function scales exponentially with code length, limiting the approach to short codes.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Information Theory,Computer Science - Neural and Evolutionary Computing},
+  file = {/home/luisd/Zotero/storage/W5NSKVVU/weindelLLMGuidedSearchDeletionCorrecting2026.pdf}
+}
+
+@online{xingRFAgentPracticalFramework2026,
+  title = {{{RF-Agent}}: {{A Practical Framework}} for {{Building Language Agents}} for {{RFIC Design}}},
+  shorttitle = {{{RF-Agent}}},
+  author = {Xing, Yueqi and He, Houbo and Wang, Jolie and Ni, Erin and Wang, Shikai and Li, Qiufeng and Cao, Weidong and Chi, Taiyun},
+  date = {2026-07-21},
+  eprint = {2607.18772},
+  eprinttype = {arXiv},
+  eprintclass = {cs.CL},
+  doi = {10.48550/arXiv.2607.18772},
+  url = {http://arxiv.org/abs/2607.18772},
+  urldate = {2026-11-01},
+  abstract = {Large language models (LLMs) have driven rapid progress in electronic design automation (EDA), yet their application to radio-frequency (RF) circuit design remains limited by the scarcity of domain-specific datasets and standardized benchmarks. We present RF-Agent, which addresses this gap through textbook-driven knowledge distillation. A multi-agent Question–Thinking–Solution–Answer (QTSA) pipeline converts a subsection-level corpus from seven canonical RF textbooks into the first-of-its-kind RF-domain reasoning dataset (over 11,000 samples) with a dedicated multiple-choice benchmark. On this benchmark we study two adaptation strategies: supervised finetuning (SFT) and three retrieval-augmented generation (RAG) configurations (semantic, keyword, hybrid). Across multiple LLM families, domain-specific SFT significantly improves RF reasoning, especially for small and medium-sized models; among RAG configurations, semantic retrieval performs best, indicating embedding-based context alignment suits RF reasoning better than naive fusion. The dataset and benchmark provide a reusable foundation for future work on LLM-aided RF circuit design.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Computation and Language},
+  file = {/home/luisd/Zotero/storage/K4D4V6J8/xingRFAgentPracticalFramework2026.pdf}
+}
+
 @inproceedings{yinADOLLMAnalogDesign2024,
   title = {{{ADO-LLM}}: {{Analog Design Bayesian Optimization}} with {{In-Context Learning}} of {{Large Language Models}}},
   shorttitle = {{{ADO-LLM}}},
@@ -149,7 +377,8 @@
   urldate = {2026-10-30},
   abstract = {Analog circuit design requires substantial human expertise and involvement, which is a significant roadblock to design productivity. Bayesian Optimization (BO), a popular machine-learning-based optimization strategy, has been leveraged to automate analog design given its applicability across various circuit topologies and technologies. Traditional BO methods employ black-box Gaussian Process surrogate models and optimized labeled data queries to find optimization solutions by trading off between exploration and exploitation. However, the search for the optimal design solution in BO can be expensive from both a computational and data usage point of view, particularly for high-dimensional optimization problems. This paper presents ADO-LLM, the first work integrating large language models (LLMs) with Bayesian Optimization for analog design optimization. ADO-LLM leverages the LLM's ability to infuse domain knowledge to rapidly generate viable design points to remedy BO's inefficiency in finding high-value design areas specifically under the limited design space coverage of the BO's probabilistic surrogate model. In the meantime, sampling of design points evaluated in the iterative BO process provides quality demonstrations for the LLM to generate high-quality design points while leveraging infused broad design knowledge. Furthermore, the diversity brought by BO's exploration enriches the contextual understanding of the LLM and allows it to more broadly search in the design space and prevent repetitive and redundant suggestions. We evaluate the proposed framework on two different types of analog circuits and demonstrate notable improvements in design efficiency and effectiveness.},
   eventtitle = {2024 {{ACM}}/{{IEEE International Conference On Computer Aided Design}} ({{ICCAD}})},
-  keywords = {Analog circuits,Bayes methods,Design optimization,Gaussian processes,Iterative methods,Large language models,Optimization,Probabilistic logic,Productivity,Search problems}
+  keywords = {Analog circuits,Bayes methods,Design optimization,Gaussian processes,Iterative methods,Large language models,Optimization,Probabilistic logic,Productivity,Search problems},
+  file = {/home/luisd/Zotero/storage/C2ZD56DZ/yinADOLLMAnalogDesign2024.pdf}
 }
 
 @online{zhangAdaptiveAntennaImpedance2026,
@@ -167,4 +396,21 @@
   pubstate = {prepublished},
   keywords = {Electrical Engineering and Systems Science - Signal Processing},
   file = {/home/luisd/Zotero/storage/KR5J3K55/zhangAdaptiveAntennaImpedance2026.pdf}
+}
+
+@online{zhengLLMEnabledAutomatedAlgorithm2026,
+  title = {{{LLM-Enabled Automated Algorithm Design}} for {{Multiuser Fluid Antenna Communications}}},
+  author = {Zheng, Gan and Liu, Fei and Zhang, Qingfu},
+  date = {2026-05-31},
+  eprint = {2605.14661},
+  eprinttype = {arXiv},
+  eprintclass = {cs.IT},
+  doi = {10.48550/arXiv.2605.14661},
+  url = {http://arxiv.org/abs/2605.14661},
+  urldate = {2026-10-31},
+  abstract = {Fluid antenna is a new reconfigurable antenna technology that can dynamically adjust the positions or ports of radiating elements and therefore provides a new degree of freedom for wireless communications. However, the associated port selection is a challenging large-scale combinatorial optimization problem and difficult to solve. Existing manually designed heuristic algorithms are not only labor-intensive, but cannot achieve satisfactory performance. In this paper, we propose a novel paradigm that leverages large language models (LLMs) for automated design of optimization algorithms for fluid antenna systems without manual hyperheuristic tuning. Specifically, we study the problem of maximizing the minimum signal-to-interference-plus-noise ratio (SINR) in the downlink to ensure fairness among users by optimizing port selection and beamforming. We investigate two LLM-enabled algorithm optimization strategies. The first is to optimize the crossover and mutation operations to enhance the performance of the well-known genetic algorithm and the second is to design AutoPort, a new heuristic from scratch by LLM, to solve the optimization problem. Simulation results verify that the proposed method can achieve near-optimal performance and significant improvement over the conventional genetic algorithm and the deep learning approach.},
+  langid = {english},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Information Theory},
+  file = {/home/luisd/Zotero/storage/5MLFEG3L/zhengLLMEnabledAutomatedAlgorithm2026.pdf}
 }

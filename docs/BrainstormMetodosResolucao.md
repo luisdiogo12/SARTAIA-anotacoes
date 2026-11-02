@@ -18,11 +18,22 @@ Uso de transfer learning
 
 ### cenas para pesquisar
 
-redes descritas por matrizes ABCD e outras
-Neural Architecture Search (NAS)
-rede neuronal feedforward (FNN)
-tunable matching network (TMN)
-Zeroth-Order Projected Gradient Descent (ZO-PGD)
+- redes descritas por matrizes ABCD e outras
+- Neural Architecture Search (NAS)
+- rede neuronal feedforward (FNN)
+- tunable matching network (TMN)
+- Zeroth-Order Projected Gradient Descent (ZO-PGD)
+- replay buffer em Deep RL
+- Multilayer Perceptron (MLP)
+- Monte Carlo Tree Search (MCTS)
+- AlphaZero
+- Recurrent Neural Network (RNN)
+- Graph Neural Network (GNN)
+
+
+- Voltage Standing Wave Ratio (VSWR)
+- Coeficiente de Refração ($\Gamma$)
+- $\text{S11}$, $\text{S21}$, $\text{S22}$, $\text{S12}$, 
 
 ## Métodos analíticos e semi-analíticos
 
@@ -212,8 +223,8 @@ Contra:
 
 
 ## Surrogates Models
+#TODO: ver melhor isto
 
-...
 
 ## Design inverso e modelos generativos
 
@@ -236,8 +247,204 @@ Limitacao: dá uma solucao por especificacao e não mostra que existem outras
 ### Difusão
 
 
-## RL de ajuste sequencial
+## Reinforcement Learning (RL) de ajuste sequencial
+
+É o RL tradicional
+
+Não aprende uma solução para um problema, aprende uma estratégia para resolver qualquer problema daquele tipo
+
+Não precisa de conhecer Z_L
+
+**Problemas:**
+- precisa de muitas amostras
+- desenho do estado é delicado
+- treino pode ser instável
+
+**Hipoteses:**
+- para problemas simples perde contra métodos como L-BFGS ou exhaustive search
+- para problemas dinamicos é melhor
+- SAC e TD3 devem ser mais eficientes que PPO com ações contínuas, devido ao **replay buffer**
+- DQN fica limitado pela discretização, exceto quando o hardware já é discreto
+
+
+### Algoritmo: Deep Q-Network (DQN)
+### Algoritmo: Proximal Policy Optimization (PPO)
+### Algoritmo: SAC
+### Algoritmo: TD3
+
+## RL ou MCTS para síntese de topologia
+
+**A ideia geral: construir o circuito como quem joga**
+
+Um LLM gera texto um token de cada vez: escolhe a próxima palavra com base no que já escreveu, até decidir parar. Aqui é igual, mas os “tokens” são componentes:
+1. Começas com uma rede vazia entre a fonte e a carga.
+2. Em cada passo, escolhes uma ação: L em série, L em paralelo, C em série, C em paralelo, ou terminar.
+3. Quando terminas (ou chegas ao limite de 6 elementos), otimizam-se os valores e calcula-se a qualidade da adaptação. Essa é a pontuação final.
+
+
+#TODO: Há artigos sobre isto, pesquisar: RL analog circuit topology synthesis, graph-based circuit generation
+
+**Problemas:**
+- recompensa esparsa: recompensa so no fim do episodeo, problema de atribuição de crédito, MCTS sofre menos com isto (a procura à frente propaga a pontuação final para trás pela própria árvore)
+- espaço de procura enorme
+- avaliações caras: para cada topologia tem que se otimizar os seus valores
+  - RL vs enumeração exaustiva
+  - pode-se guardar o resultado em cache, para o agent nao ter que calcular todas as vezes
+  - RL/MCTS só compensa quando o espaço não se pode enumerar
+
+**Hipotese:**
+
+RL/MCTS escolhe topologia e otimizafor local escolhe valores (é assim que NAS em redes neurais funciona)
+
+### Graph Neural Network (GNN)
+
+Um circuito é naturalmente um grafo: os nós são os pontos de ligação e as arestas são os componentes. Uma Graph Neural Network lê grafos de qualquer tamanho e forma e produz uma representação que a política pode usar para decidir.
+
+Em topologias sequenciais GNN é demasiado (um RNN é suficiente), só se torna necessária se permitires topologias arbitrárias
+
+### Monte Carlo Tree Search (MCTS)
+
+Algoritmo de planeamento por trás do AlphaGo e do AlphaZero
+
+Pesquisar melhor sobre isto
+
+## Questão dos Contextual Bandits e RL offline
+
+#TODO: ver melhor isto
+### One-Armed Bandit
+
+### Multi-Armed Bandit
+
+### Contextual Bandit
+
+### Thompson Sampling
+
+### RL Offline
+
+## LLM como otimizador ou operador evolutivo
+
+Ideia: LLM ser uma ferramenta para outros algoritmos
+
+**Problemas:**
+- fraca precisão numerica: LLMs são maus com números precisos
+- custo e latência: maior custo que mutações gaussianas
+- não determinismo: mesmo prompt com respostas diferentes, o modelo (comercial) poder ser atualizado sem aviso
+- contaminação: lembrar-se de resultados de exercicios (data leakage)
+
+**Hipotese:**
+- Aproximação mais rápida nas primeira iterações: o conhecimento no dominio conduz logo para a zona certa dando um bom ponto de partida
+- Refina pior que CMA-ES: para valores
+- Melhor como operador do que sozinho: dentro de um GA os erros do LLM são filtrados pela seleção
+- Com estes pontos, a melhor proposta seria: GA para selação, LLM para propor mutações estruturais, L-BFGS para afinar valores
+
+
+### Como otimizador
+
+LLM é o algoritmo de otimização:
+1. prompt contem histórico: soluções já experimentadas e custo de cada uma ordenadas
+2. pede-se ao LLM para propor uma nova solução melhor que as no historico
+3. avalia-se a proposta no simulador, junta-se no historico e repete-se
+
+#TODO: pesquisar OPRO da Google DeepMind (2023), que mostrou que um LLM consegue otimizar desta forma em vários problemas
+
+### Como operador dentro de GA
+
+A mutação (ou a recombinação) passa a ser uma chamada ao LLM: “eis esta rede e a sua resposta, propõe uma modificação”
+
+#TODO: pesquiar precedentes desta ideia: FunSearch (DeepMind, publicado na Nature em 2023) e o AlphaEvolve (DeepMind, 2025) usam LLMs como operadores evolutivos para descobrir programas e algoritmos novos, e chegaram a resultados matemáticos inéditos
+
+## Agente LLM com ferramentas
+
+Ideia: 
+
+LLM ter outros algoritmos como ferramentas, LLm é que conduz o trabalho
+
+Imita o fluxo de trabalho de um engenheiro. le as especificações, percebe a carga, escolhe uma abordagem, simula, verifica, ajusta e documenta.
+
+Uma coisa boa é dar para aceitar especificações em linguagen natural que seriam dificies de formalizar. ex: “o menor número de componentes possível”, “evita condensadores abaixo de 1 pF, que têm tolerâncias más”
+
+Loop:
+1. Pensar: Baseado no que sabe e no problema, como pode resolver ou dar um passo na resolução
+2. Agir: Chama as ferramentas que precisa
+3. Observar: Analisa os resultados que obteve
+4. Repetir até concluir a tarefa
+
+Exemplos de ferramentas:
+- ler a impedância da antena em cada frequência
+- dizer o melhor resultado teoricamente possível (limite bode fano)
+- calcular solução analitica
+- otimizar valores com L-BFGS com multistart
+- ver os valores comerciais que existem
+- simular
+- analisar tolerancias
+
+
+**Problemas:**
+- Alucinações:
+- Custo:
+- Reprodutibilidade dificil:
+- Dependencia de modelos proprietários:
+
+**Hipotese:** Forte nas decisões qualitativas (topologia, restrições, interpretação). Os números finais devem vir sempre de ferramentas numéricas.
+
+## LLM para descobrir heurísticas
+
+Baseado em que muitas escolhas do engenheiro são “hipóteses pragmáticas baseadas em heurísticas empíricas”
+
+
+Uma das formas: GA com LLM como operador (como em "LLM como otimizador ou operador evolutivo"), mas o "cromossoma" é codigo:
+1. Esqueleto fixo: Um programa com uma única função a evoluir, e um avaliador que corre essa função num conjunto de testes e lhe dá uma pontuação
+2. Base de dados de programas: Guarda-se todos os programas gerados e as suas pontuações
+3. Pedido ao LLM: Mostra-se os melhores programas por ordem de pontuação e pede-se para escrever uma versão melhor
+4. Avaliação Automática: Corre-se o programa de novo. Se der erro/demorar/pontuar mal descarta-se, se for bom entra na base de dados
+5. Repete-se
+
+Alucinações do LLM deixam de ser perigosas: Se o LLM escrever uma fórmula errada, o avaliador dá-lhe má pontuação e o programa morre. O LLM traz criatividade e o avaliador garante a correção
+
+É interpretável. O resultado é código que podes ler e uma heurística descoberta pode ser relevante. É reutilizável, sem LLM. Depois de encontrado, o programa é uma função normal
+
+**Problemas:**
+- muitas chamadas ao LLM
+- precisa de um conjunto diverso de testes: por exemplo, o LLM pode escrever para uma função que apenas retorna o resultado(reward hacking). As proteções são as do ML clássico:
+  -  separar as cargas em treino, validação e teste
+  -  sortear cargas novas periodicamente
+  -  penalizar programas compridos
+  -  ler o código dos melhores programas
+- resultado é imprevisivel: pode demorar muito a encontrar nada melhor que a baseline
+
+**Hipotese:**
+- não resolve diretamente o problema principal, melhora uma peça de outro método: o ponto de partida do L-BFGS
+- pode descobrir regras de inicialização claramente melhores do que inícios aleatórios
+
+O resultado mais interessante seria um programa legível que se aproxime de Design inverso e modelos generativos
+
+#TODO: Pesquisar: foi esta combinação que fez o **FunSearch (DeepMind, 2023)** descobrir heurísticas novas para problemas como o bin packing (arrumar objetos no menor número de caixas possível), e que o **AlphaEvolve (2025)** levou mais longe, incluindo heurísticas usadas na prática em centros de dados.
+
+## Meta-Learning e Transfer Learning
+
+
+Transfer learning: reaproveitar o que se aprendeu. Treina-se numa tarefa e reutiliza-se noutra. Tipo fine-tunning
+
+Meta-learning: treinar explicitamente para se adaptar depressa. O treino é organizado em muitas tarefas, e o objetivo não é ser bom numa delas, mas sim ser bom depois de poucos passos de adaptação a uma tarefa nova.
+
+#TODO: completar isto
+
+
+
+#TODO: Pesquisar: MAML - exemplo de meta-learning
+
+
+## LLM pequeno ajustado ao domínio ou RAG
+
+#TODO: completar
+
+### fine-tuning de um LLM pequeno
+
+### RAG
+
+## Otimização robusta e de rendimento (yield)
+#TODO: completar
 
 ## Resumo
 
-encontrar valores vs encontrar topologias
+
