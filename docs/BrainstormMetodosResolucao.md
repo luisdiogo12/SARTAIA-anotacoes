@@ -29,11 +29,33 @@ Uso de transfer learning
 - AlphaZero
 - Recurrent Neural Network (RNN)
 - Graph Neural Network (GNN)
+- long short-term memory (LSTM)
+- transformers 
 
 
 - Voltage Standing Wave Ratio (VSWR)
 - Coeficiente de Refração ($\Gamma$)
 - $\text{S11}$, $\text{S21}$, $\text{S22}$, $\text{S12}$, 
+- SPACE
+- AlphaGO e AlphaZero
+- FunSearch AlphaEnvolve 
+
+### keys para pesquisa
+- impedance
+- impedance matching
+- network topology
+- circuits
+- circuit synthesis
+- input impedance
+- load modeling
+- Electronic design automation
+- large language models
+- artificial neural network (ANN)
+- Deep neural network (DNN)
+- deep learning
+- search problems
+- automated heuristic design
+
 
 ## Métodos analíticos e semi-analíticos
 

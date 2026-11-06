@@ -4,6 +4,8 @@
 ## Semana 2026/11/02
 
 **Feito**
+- trabalhar no teste manual de LLMs
+- capitulo 2 curso agentes
 
 Reunião com os orientadores:
 - Pesquisar o uso de LLM em malhas
