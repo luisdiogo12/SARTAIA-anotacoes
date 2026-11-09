@@ -1,5 +1,15 @@
 # Relatório de Progresso
 
+## Semana 2026/11/09
+
+**ToDo**
+- report do teste de LLM
+- testar outros metodos de descrever os circuitos (graphnet) para LLM
+- pesquisar LLM em malhas
+- continuar a leitura de artigos
+
+Reunião com os orientadores:
+- fazer um report do test  de LLM
 
 ## Semana 2026/11/02
 
