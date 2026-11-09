@@ -5,6 +5,8 @@
 
 **Feito**
 - trabalhar no teste manual de LLMs
+- leitura de mais artigos
+- ligar VPN do it
 - capitulo 2 curso agentes
 
 Reunião com os orientadores:
