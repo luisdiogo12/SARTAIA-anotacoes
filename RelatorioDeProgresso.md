@@ -1,6 +1,21 @@
 # Relatório de Progresso
 
+
+## Semana 2026/11/16
+
+**ToDo**
+- começar a estabelecer a metodologia
+- adicionar os exemplos ao report
+
+Reunião com os orientadores:
+- adicionar ao report exemplos de cada tipo de problema
+
+
 ## Semana 2026/11/09
+
+**Feito**
+- report do teste de LM
+- pesquisa de metodos de descrever circuitos para LLM
 
 **ToDo**
 - report do teste de LLM
